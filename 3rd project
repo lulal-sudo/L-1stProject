@@ -1,0 +1,21 @@
+<h5>Data Warehouse Project</h5>
+<p>For the project, an AWS Redshift data warehouse needs to be created and build an ETL pipeline for a database hosted on Redshift. Data needs to be load from S3 to staging tables on Redshift and execute SQL statements that create the analytics tables from these staging tables.</p>
+
+<h6>The purpose of the database in context of the startup, Sparkify, and their analytical goals.</h6>
+
+<p>A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.</p>
+
+<p>I’m tasked to build an ETL pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for their analytics team to continue finding insights in what songs their users are listening to. I’m able to test the database and ETL pipeline by running queries given to me by the analytics team from Sparkify and compare your results with their expected results.</p>
+
+<h6>Project Template</h6>
+<p>Includes four files:</p>
+> - create*table.py is where the fact and dimension tables for the star schema in Redshift created.
+> - etl.py is where data from S3 into staging tables on Redshift and then process that data into your analytics tables on Redshift.
+> - sql*queries.py is where the SQL statements define and will be imported into the two other files above.
+> - create*cluster*redshift. ipynb is where the AWS Redshift Cluster created by using SDK.
+> - dwf.cfg is the info about the personal account of AWS
+
+<h6>State and justify the database schema design and ETL pipeline</h6>
+<h6><em>Step 1: Create Table Schemas</em></h6>
+> <p>Design schemas with fact and dimension tables; and write a SQL CREATE statement for each fact and dimension table in SQL_queries.py.</p>
+> <p>Using the song and event datasets, I create a star schema optimized for queries on song play analysis. </p>
